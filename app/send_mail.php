@@ -29,8 +29,6 @@ try {
 } catch (ErrorException $e) {
     return null;
 }
-// Всё прошло успешно
-//return true;
 
 use PHPMailer\PHPMailer\PHPMailer;
 
