@@ -1,4 +1,5 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
 // Подключаем полезные функции
 require_once 'utils.php';
 // Создаём папку для писем, если её нет
@@ -29,9 +30,7 @@ try {
 } catch (ErrorException $e) {
     return null;
 }
-
-use PHPMailer\PHPMailer\PHPMailer;
-
+// Отправка письма
 $mail = new PHPMailer;
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->IsSMTP();
